@@ -16,7 +16,7 @@
 
         .lg-heading {
             line-height: 1;
-            margin-bottton: 1rem;
+            margin-bottom: 1rem;
         }
     }
     
@@ -26,7 +26,7 @@
         min-height: 0;
 
         &.show {
-            tranform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
         }
     }
 
