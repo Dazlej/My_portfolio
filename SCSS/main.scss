@@ -149,6 +149,10 @@ main {
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
+
+  .foot-text {
+    color: $secondary-color;
+  }
 }
 
 @import 'mobile';
