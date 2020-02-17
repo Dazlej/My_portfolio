@@ -134,6 +134,30 @@ a {
   color: #eee7e7;
   text-decoration: none; }
 
+.chat {
+  position: fixed;
+  margin-left: 60px; }
+  .chat h5 {
+    font-weight: lighter;
+    color: #28ca7f;
+    background-color: #5a5757;
+    padding: 2px 6px 2px 6px;
+    border: none;
+    border-radius: 10px 10px 0 10px;
+    transition: all 0.5s ease-out; }
+  .chat .chat-1 {
+    padding: 0.6rem; }
+    .chat .chat-1:hover {
+      transition: all 0.5s ease-out; }
+      .chat .chat-1:hover h5 {
+        font-weight: bold;
+        color: #fff;
+        background-color: #28ca7f;
+        padding: 2px 6px 2px 6px;
+        border: none;
+        border-radius: 10px 10px 10px 0;
+        transition: all 0.5s ease-out; }
+
 header {
   position: fixed;
   z-index: 2;
@@ -194,7 +218,18 @@ main {
   .about-info .job {
     background: #676464;
     padding: 0.5rem;
-    border-bottom: #28ca7f 5px solid; }
+    border-bottom: #28ca7f 2px solid;
+    text-align: center; }
+
+.projects {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr); }
+  .projects img {
+    width: 100%;
+    max-height: 150px; }
+  .projects a {
+    text-align: center; }
 
 #main-footer {
   text-align: center;
