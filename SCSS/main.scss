@@ -186,6 +186,7 @@ main {
   img {
     width: 100%;
     border: 3px #fff solid;
+    border-radius: 5px;
 
     &:hover {
       opacity: 0.5;
@@ -200,6 +201,7 @@ main {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
+  border-radius: 5px;
   margin-bottom: 0.3rem;
 
   &:hover {

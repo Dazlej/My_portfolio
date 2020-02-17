@@ -1,74 +1,87 @@
 // Widescreens
 @include mediaXl {
-
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // Desktops & Laptops
 @include mediaLg {
-
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // Tablets & Small Laptops
 @include mediaMd {
-    main {
-        align-items: center;
-        text-align: center;
+  main {
+    align-items: center;
+    text-align: center;
 
-        .lg-heading {
-            line-height: 1;
-            margin-bottom: 1rem;
-        }
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
     }
-    
-    ul.menu-nav,div.menu-branding {
-        float: none;
-        width: 100%;
-        min-height: 0;
+  }
 
-        &.show {
-            transform: translate3d(0, 0, 0);
-        }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
     }
+  }
 
-    .menu-nav {
-        height: 75vh;
-        transform: translate3d(-100%, 0, 0);
-        font-size: 24px;
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+
+  .menu-branding {
+    height: 25vh;
+    transform: translated3d(100%, 0, 0);
+
+    .portrait {
+      background: url("../img/portraitSm.jpg");
+      width: 150px;
+      height: 150px;
     }
+  }
 
-    .menu-branding {
-        height: 25vh;
-        transform: translated3d(100%, 0, 0);
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3"
+      "job4"
+      "job5"
+      "job6"
+      "job7"
+      "job8"
+      "job9"
+      "job10";
 
-        .portrait {
-            background: url('../img/portraitSm.jpg');
-            width: 150px;
-            height: 150px;
-        }
-    }
+    grid-template-columns: 1fr;
+  }
 
-    .about-info {
-        grid-template-areas: 
-        'bioimage'
-        'bio'
-        'job1'
-        'job2'
-        'job3'
-        'job4'
-        'job5'
-        'job6'
-        'job7'
-        'job8'
-        'job9'
-        'job10';
-
-        grid-template-columns: 1fr;
-    }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // Smartphones
 @include mediaSm {
-    main#home h1 {
-        margin-top: 10vh;
-    }
+  main#home h1 {
+    margin-top: 10vh;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }
