@@ -38,17 +38,17 @@ a {
   text-decoration: none;
 }
 
-.chat{
+.chat {
   position: fixed;
   margin-left: 60px;
 
-  h5{
+  h5 {
     font-weight: lighter;
     color: $secondary-color;
     background-color: $primary-color;
     padding: 2px 6px 2px 6px;
     border: none;
-    border-radius: 10px 10px 0 10px;
+    border-radius: 10px 0 10px 10px;
     @include easeOut();
   }
 
@@ -58,7 +58,7 @@ a {
     &:hover {
       @include easeOut();
 
-      h5{
+      h5 {
         font-weight: bold;
         color: #fff;
         background-color: $secondary-color;
@@ -111,9 +111,9 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-  'bioimage bio bio bio bio'
-  'job1 job2 job3 job4 job5'
-  'job6 job7 job8 job9 job10';
+    "bioimage bio bio bio bio"
+    "job1 job2 job3 job4 job5"
+    "job6 job7 job8 job9 job10";
   grid-template-columns: repeat(5, 1fr);
 
   .bio-image {
@@ -180,17 +180,38 @@ main {
 // Projects
 .projects {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
 
   img {
     width: 100%;
-    max-height: 150px;
-  }
+    border: 3px #fff solid;
 
-  a {
-    text-align: center;
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
   }
+}
+
+// Button Styles
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($primary-color);
+  }
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: $primary-color;
 }
 
 #main-footer {
@@ -205,4 +226,4 @@ main {
   }
 }
 
-@import 'mobile';
+@import "mobile";
