@@ -197,29 +197,72 @@ main {
     text-align: justify; }
   .about-info .job-1 {
     grid-area: job1; }
+    .about-info .job-1:hover {
+      background: #c713c7;
+      border: none;
+      border-radius: 10px; }
   .about-info .job-2 {
     grid-area: job2; }
+    .about-info .job-2:hover {
+      background: #ec825c;
+      border: none;
+      border-radius: 10px; }
   .about-info .job-3 {
     grid-area: job3; }
+    .about-info .job-3:hover {
+      background: #106197;
+      border: none;
+      border-radius: 10px; }
   .about-info .job-4 {
     grid-area: job4; }
+    .about-info .job-4:hover {
+      background: #da710f;
+      border: none;
+      border-radius: 10px; }
   .about-info .job-5 {
     grid-area: job5; }
+    .about-info .job-5:hover {
+      background: #2577b9;
+      border: none;
+      border-radius: 10px; }
   .about-info .job-6 {
     grid-area: job6; }
+    .about-info .job-6:hover {
+      background: #9743be;
+      border: none;
+      border-radius: 10px; }
   .about-info .job-7 {
     grid-area: job7; }
+    .about-info .job-7:hover {
+      background: #ca1972;
+      border: none;
+      border-radius: 10px; }
   .about-info .job-8 {
     grid-area: job8; }
+    .about-info .job-8:hover {
+      background: #bbbd39;
+      border: none;
+      border-radius: 10px; }
   .about-info .job-9 {
     grid-area: job9; }
+    .about-info .job-9:hover {
+      background: #1d6f75;
+      border: none;
+      border-radius: 10px; }
   .about-info .job-10 {
     grid-area: job10; }
+    .about-info .job-10:hover {
+      background: #b0cdd6;
+      border: none;
+      border-radius: 10px; }
   .about-info .job {
     background: #343030;
     padding: 0.5rem;
     border-bottom: #28ca7f 2px solid;
-    text-align: center; }
+    text-align: center;
+    transition: all 0.5s ease-out; }
+    .about-info .job:hover {
+      transition: all 0.5s ease-out; }
 
 .projects {
   display: grid;
@@ -233,6 +276,26 @@ main {
       opacity: 0.5;
       border-color: #28ca7f;
       transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 1.5rem;
+    border: 3px #fff solid;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #28ca7f;
+      color: #000;
+      border-radius: 10px; }
+      .boxes div:hover span {
+        color: #fff; }
 
 .btn, .btn-light {
   display: block;

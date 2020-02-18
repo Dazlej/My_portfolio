@@ -131,42 +131,102 @@ main {
 
   .job-1 {
     grid-area: job1;
+
+    &:hover {
+      background: rgb(199, 19, 199);
+      border: none;
+      border-radius: 10px;
+    }
   }
 
   .job-2 {
     grid-area: job2;
+
+    &:hover {
+      background: rgb(236, 130, 92);
+      border: none;
+      border-radius: 10px;
+    }
   }
 
   .job-3 {
     grid-area: job3;
+
+    &:hover {
+      background: rgb(16, 97, 151);
+      border: none;
+      border-radius: 10px;
+    }
   }
 
   .job-4 {
     grid-area: job4;
+
+    &:hover {
+      background: rgb(218, 113, 15);
+      border: none;
+      border-radius: 10px;
+    }
   }
 
   .job-5 {
     grid-area: job5;
+
+    &:hover {
+      background: rgb(37, 119, 185);
+      border: none;
+      border-radius: 10px;
+    }
   }
 
   .job-6 {
     grid-area: job6;
+
+    &:hover {
+      background: rgb(151, 67, 190);
+      border: none;
+      border-radius: 10px;
+    }
   }
 
   .job-7 {
     grid-area: job7;
+
+    &:hover {
+      background: rgb(202, 25, 114);
+      border: none;
+      border-radius: 10px;
+    }
   }
 
   .job-8 {
     grid-area: job8;
+
+    &:hover {
+      background: rgb(187, 189, 57);
+      border: none;
+      border-radius: 10px;
+    }
   }
 
   .job-9 {
     grid-area: job9;
+
+    &:hover {
+      background: rgb(29, 111, 117);
+      border: none;
+      border-radius: 10px;
+    }
   }
 
   .job-10 {
     grid-area: job10;
+
+    &:hover {
+      background: rgb(176, 205, 214);
+      border: none;
+      border-radius: 10px;
+    }
   }
 
   .job {
@@ -174,6 +234,11 @@ main {
     padding: 0.5rem;
     border-bottom: $secondary-color 2px solid;
     text-align: center;
+    @include easeOut();
+
+    &:hover {
+      @include easeOut();
+    }
   }
 }
 
@@ -192,6 +257,33 @@ main {
       opacity: 0.5;
       border-color: $secondary-color;
       @include easeOut;
+    }
+  }
+}
+
+// Contact Page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 1.5rem;
+    border: 3px #fff solid;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      border-radius: 10px;
+      span {
+        color: #fff;
+      }
     }
   }
 }
