@@ -150,7 +150,7 @@ a {
     .chat .chat-1:hover {
       transition: all 0.5s ease-out; }
       .chat .chat-1:hover h5 {
-        font-weight: bold;
+        font-weight: normal;
         color: #fff;
         background-color: #28ca7f;
         padding: 2px 6px 2px 6px;
@@ -262,6 +262,7 @@ main {
     text-align: center;
     transition: all 0.5s ease-out; }
     .about-info .job:hover {
+      font-family: cursive;
       transition: all 0.5s ease-out; }
 
 .projects {
@@ -278,16 +279,16 @@ main {
       transition: all 0.5s ease-out; }
 
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
   margin-top: 1rem; }
   .boxes div {
     font-size: 1.5rem;
     border: 3px #fff solid;
-    padding: 1rem 2rem;
-    margin-bottom: 3rem;
+    padding: 5px;
+    margin-bottom: 1rem;
+    text-align: center;
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
@@ -296,6 +297,65 @@ main {
       border-radius: 10px; }
       .boxes div:hover span {
         color: #fff; }
+
+#container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center; }
+
+#contact-img {
+  width: 50px;
+  height: 50px; }
+
+#form-box {
+  background: #272424;
+  color: #fff;
+  opacity: 1;
+  position: relative;
+  width: 600px;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.1), 0 6px 10px 5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease-in-out; }
+
+#form-box.close {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: 0.8s ease-in-out;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0); }
+
+#next-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  font-size: 40px;
+  color: #fff;
+  float: right;
+  cursor: pointer;
+  z-index: 2; }
+  #next-btn:hover {
+    color: #28ca7f; }
+
+#prev-btn {
+  position: absolute;
+  font-size: 18px;
+  left: 30px;
+  top: 12px;
+  z-index: 2;
+  color: #423c3c;
+  float: right;
+  cursor: pointer; }
+  #prev-btn:hover {
+    color: #28ca7f; }
+
+#input-group {
+  position: relative;
+  padding: 30px 20px 20px 20px;
+  margin: 10px 60px 10px 10px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out; }
 
 .btn, .btn-light {
   display: block;

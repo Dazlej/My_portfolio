@@ -59,7 +59,7 @@ a {
       @include easeOut();
 
       h5 {
-        font-weight: bold;
+        font-weight: normal;
         color: #fff;
         background-color: $secondary-color;
         padding: 2px 6px 2px 6px;
@@ -237,6 +237,7 @@ main {
     @include easeOut();
 
     &:hover {
+      font-family: cursive;
       @include easeOut();
     }
   }
@@ -263,17 +264,17 @@ main {
 
 // Contact Page
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
   margin-top: 1rem;
 
   div {
     font-size: 1.5rem;
     border: 3px #fff solid;
-    padding: 1rem 2rem;
-    margin-bottom: 3rem;
+    padding: 5px;
+    margin-bottom: 1rem;
+    text-align: center;
     @include easeOut;
 
     &:hover {
@@ -286,6 +287,78 @@ main {
       }
     }
   }
+}
+
+// Contact Form
+#container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+}
+
+#contact-img {
+  width: 50px;
+  height: 50px;
+}
+
+#form-box {
+  background: $primary-color;
+  color: #fff;
+  opacity: 1;
+  position: relative;
+  width: 600px;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.1),
+    0 6px 10px 5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease-in-out;
+}
+
+#form-box.close {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: 0.8s ease-in-out;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0);
+}
+
+#next-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  font-size: 40px;
+  color: #fff;
+  float: right;
+  cursor: pointer;
+  z-index: 2;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+#prev-btn {
+  position: absolute;
+  font-size: 18px;
+  left: 30px;
+  top: 12px;
+  z-index: 2;
+  color: lighten($primary-color, 10);
+  float: right;
+  cursor: pointer;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+#input-group {
+  position: relative;
+  padding: 30px 20px 20px 20px;
+  margin: 10px 60px 10px 10px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
 // Button Styles
