@@ -1,5 +1,5 @@
-@import "config";
-@import "menu";
+@import 'config';
+@import 'menu';
 
 * {
   box-sizing: border-box;
@@ -11,7 +11,7 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
 
@@ -111,9 +111,9 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "bioimage bio bio bio bio"
-    "job1 job2 job3 job4 job5"
-    "job6 job7 job8 job9 job10";
+    'bioimage bio bio bio bio'
+    'job1 job2 job3 job4 job5'
+    'job6 job7 job8 job9 job10';
   grid-template-columns: repeat(5, 1fr);
 
   .bio-image {
@@ -289,6 +289,7 @@ main {
 }
 
 // Contact Form
+
 #container {
   height: 40vh;
   display: flex;
@@ -297,9 +298,23 @@ main {
   align-items: center;
 }
 
-#contact-img {
-  width: 50px;
-  height: 50px;
+#contact-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid $secondary-color;
+
+  img {
+    margin-top: 7px;
+    margin-right: 6px;
+  }
+}
+
+#logo-heading {
+  color: #fff;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
 #form-box {
@@ -308,10 +323,15 @@ main {
   opacity: 1;
   position: relative;
   width: 600px;
-  border-radius: 5px 5px 0 0;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.1),
-    0 6px 10px 5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    0 6px 10px 5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgb(0, 0, 0.2);
   transition: transform 0.1s ease-in-out;
+
+  &:hover {
+    // transform: translate(0px, 10px);
+  }
 }
 
 #form-box.close {
@@ -327,13 +347,13 @@ main {
   right: 20px;
   bottom: 10px;
   font-size: 40px;
-  color: #fff;
+  color: $secondary-color;
   float: right;
   cursor: pointer;
   z-index: 1;
 
   &:hover {
-    color: $secondary-color;
+    color: lighten($secondary-color, 30);
   }
 }
 
@@ -393,7 +413,7 @@ main {
 }
 
 #input-progress {
-  border-bottom: 2px solid $secondary-color;
+  border-bottom: 3px solid $secondary-color;
   width: 0;
   transition: width 0.6s ease-in-out;
 }
@@ -404,6 +424,13 @@ main {
   height: $progress-height;
   width: 0;
   transition: width 0.5s ease-in-out;
+}
+
+.close {
+  #next-btn,
+  #prev-btn {
+    color: $primary-color;
+  }
 }
 
 .error {
@@ -448,4 +475,4 @@ main {
   }
 }
 
-@import "mobile";
+@import 'mobile';
