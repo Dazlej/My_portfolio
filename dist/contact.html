@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/main.css">
-    <title>About Me</title>
+    <title>Contact Me</title>
 </head>
 <body>
     <header>
@@ -43,21 +44,21 @@
             Contact <span class= "text-secondary">Me</span>
         </h1>
         <h2 class= "sm-heading">
-            I'm available for freelancing Hire me  <span class= "text-secondary"> &DownArrow; &DownArrow; &DownArrow;</span>
+            I'm available for freelancing Hire me  <span class= "text-secondary  animated flash"> &DownArrow;</span>
         </h2>
 
         <div id= "container">
             <div id= "contact-logo">
-                <img src= "img/chat.png" alt= "Contact">
+                <img src= "img/chat.png" alt= "Contact" class="animated wobble">
             </div>
             <h4 id= "logo-heading">
                 Send Me A Direct Message Here
             </h4>
-            <div id="form-box">
+            <div id="form-box" class=" animated bounceIn" action="POST" data-netlify="true">
                 <i id= "prev-btn" class= "fas fa-arrow-left"></i>
                 <i id= "next-btn" class= "fas fa-arrow-right"></i>
                 <div id= "input-group">
-                    <input id= "input-field" required>
+                    <input id= "input-field" required />
                     <label id= "input-label"></label>
                     <div id= "input-progress"></div>
                 </div>
@@ -67,16 +68,16 @@
 
         <div class= "boxes">
             <div>
-                <span class= "text-secondary">Email:</span>
-                </span> Dajosh@techjoda.com.ng
+                <span class= "text-secondary"><i class="fa fa-envelope"></i></span>
+                </span>  Dajosh@techjoda.com.ng
             </div>
             <div>
-                <span class= "text-secondary">Phone:</span>
-                </span> (+234) 706-890-1357
+                <span class= "text-secondary"><i class="fa fa-phone"></i></span>
+                </span>  (+234) 706-890-1357
             </div>
             <div>
-                <span class= "text-secondary">Address:</span>
-                </span> Alayo farms, Abuja Road phaseII, Itobe, Kogi, Nigeria
+                <span class= "text-secondary"><i class="fa fa-map-marker-alt"></i></span>
+                </span>  Alayo farms Abuja Road Itobe, Kogi-Nigeria
             </div>
         </div>
     </main>

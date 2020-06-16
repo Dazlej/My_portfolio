@@ -3,7 +3,7 @@ const questions = [
   { question: 'Enter Your First Name' },
   { question: 'Enter Your Last Name' },
   { question: 'Enter Your Email', pattern: /\S+@\S+\.\S+/ },
-  { question: 'Create A Password', type: 'password' }
+  { question: 'Write your message here and press Enter to Send :)'}
 ];
 
 // Transition Times
@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', getQuestion);
 
 // Next Button Click
 nextBtn.addEventListener('click', validate);
+
 
 // Input Field Enter Click
 inputField.addEventListener('keyup', e => {
@@ -129,9 +130,8 @@ function inputPass() {
   }
 }
 
-// All Fields Complete - Show h1 end
+// All Fields Complete - Show h4 end
 function formComplete() {
-  console.log(questions);
   const h4 = document.createElement('h4');
   h4.classList.add('end');
   h4.appendChild(

@@ -8,6 +8,7 @@ $background-opacity: 0.9;
 $error: #ff2d26;
 $progress-height: 10px;
 
+// Mixins
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
